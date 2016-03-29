@@ -15,14 +15,7 @@ public protocol LineSegmentType: Equatable {
     init(first: Point, second: Point)
 }
 
-public enum LineSegmentIntersection <LineSegment: LineSegmentType> {
-    case None
-    case Disjoint
-    case Intersect(LineSegment.Point)
-    case Overlap(LineSegment)
-}
-
-extension LineSegmentType {
+public extension LineSegmentType {
 
     func containsPoint(point: Point) -> Bool {
         if first.x != second.x {    // self is not vertical
@@ -46,8 +39,16 @@ extension LineSegmentType {
 
 }
 
+// MARK: -
 
-extension LineSegmentType where Point.Scalar: FloatingPointType {
+public enum LineSegmentIntersection <LineSegment: LineSegmentType> {
+    case None
+    case Disjoint
+    case Intersect(LineSegment.Point)
+    case Overlap(LineSegment)
+}
+
+public extension LineSegmentType where Point.Scalar: FloatingPointType {
 
     public func intersection(other: Self) -> Point? {
         if case .Intersect(let intersection) = advancedIntersection(other) {

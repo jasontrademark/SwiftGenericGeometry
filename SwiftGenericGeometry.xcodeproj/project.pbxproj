@@ -16,10 +16,18 @@
 		45FBD9901CAB382B006C368B /* MapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FBD98F1CAB382B006C368B /* MapKit.swift */; };
 		45FBD9921CAB3A4D006C368B /* IntegerTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FBD9911CAB3A4D006C368B /* IntegerTypes.swift */; };
 		45FBD9961CAB3EBB006C368B /* LineSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FBD9951CAB3EBB006C368B /* LineSegment.swift */; };
+		45FBD9A61CAB4665006C368B /* Scalar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FBD9851CAB367E006C368B /* Scalar.swift */; };
+		45FBD9A71CAB4665006C368B /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FBD9871CAB369B006C368B /* Point.swift */; };
+		45FBD9A81CAB4665006C368B /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FBD98B1CAB3703006C368B /* Size.swift */; };
+		45FBD9A91CAB4665006C368B /* Rect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FBD98D1CAB3708006C368B /* Rect.swift */; };
+		45FBD9AA1CAB4665006C368B /* CoreGraphics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FBD9891CAB36B2006C368B /* CoreGraphics.swift */; };
+		45FBD9AB1CAB4665006C368B /* MapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FBD98F1CAB382B006C368B /* MapKit.swift */; };
+		45FBD9AC1CAB4665006C368B /* IntegerTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FBD9911CAB3A4D006C368B /* IntegerTypes.swift */; };
+		45FBD9AD1CAB4665006C368B /* LineSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FBD9951CAB3EBB006C368B /* LineSegment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		455BE97A1CAB361F005D17B2 /* SwiftGenericGeometry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftGenericGeometry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		455BE97A1CAB361F005D17B2 /* SwiftGenericGeometry_OSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftGenericGeometry_OSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		455BE97D1CAB361F005D17B2 /* SwiftGenericGeometry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftGenericGeometry.h; sourceTree = "<group>"; };
 		455BE97F1CAB361F005D17B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45FBD9841CAB3664006C368B /* GenericGeo.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = GenericGeo.playground; sourceTree = "<group>"; };
@@ -31,10 +39,18 @@
 		45FBD98F1CAB382B006C368B /* MapKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapKit.swift; sourceTree = "<group>"; };
 		45FBD9911CAB3A4D006C368B /* IntegerTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntegerTypes.swift; sourceTree = "<group>"; };
 		45FBD9951CAB3EBB006C368B /* LineSegment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineSegment.swift; sourceTree = "<group>"; };
+		45FBD99E1CAB462D006C368B /* SwiftGenericGeometry_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftGenericGeometry_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		455BE9761CAB361F005D17B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45FBD99A1CAB462D006C368B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -56,7 +72,8 @@
 		455BE97B1CAB361F005D17B2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				455BE97A1CAB361F005D17B2 /* SwiftGenericGeometry.framework */,
+				455BE97A1CAB361F005D17B2 /* SwiftGenericGeometry_OSX.framework */,
+				45FBD99E1CAB462D006C368B /* SwiftGenericGeometry_iOS.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -97,12 +114,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		45FBD99B1CAB462D006C368B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		455BE9791CAB361F005D17B2 /* SwiftGenericGeometry */ = {
+		455BE9791CAB361F005D17B2 /* SwiftGenericGeometry_OSX */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 455BE9821CAB361F005D17B2 /* Build configuration list for PBXNativeTarget "SwiftGenericGeometry" */;
+			buildConfigurationList = 455BE9821CAB361F005D17B2 /* Build configuration list for PBXNativeTarget "SwiftGenericGeometry_OSX" */;
 			buildPhases = (
 				455BE9751CAB361F005D17B2 /* Sources */,
 				455BE9761CAB361F005D17B2 /* Frameworks */,
@@ -113,9 +137,27 @@
 			);
 			dependencies = (
 			);
-			name = SwiftGenericGeometry;
+			name = SwiftGenericGeometry_OSX;
 			productName = SwiftGenericGeometry;
-			productReference = 455BE97A1CAB361F005D17B2 /* SwiftGenericGeometry.framework */;
+			productReference = 455BE97A1CAB361F005D17B2 /* SwiftGenericGeometry_OSX.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		45FBD99D1CAB462D006C368B /* SwiftGenericGeometry_iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 45FBD9A31CAB462D006C368B /* Build configuration list for PBXNativeTarget "SwiftGenericGeometry_iOS" */;
+			buildPhases = (
+				45FBD9991CAB462D006C368B /* Sources */,
+				45FBD99A1CAB462D006C368B /* Frameworks */,
+				45FBD99B1CAB462D006C368B /* Headers */,
+				45FBD99C1CAB462D006C368B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftGenericGeometry_iOS;
+			productName = SwiftGenericGeometry;
+			productReference = 45FBD99E1CAB462D006C368B /* SwiftGenericGeometry_iOS.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -128,6 +170,9 @@
 				ORGANIZATIONNAME = schwa.io;
 				TargetAttributes = {
 					455BE9791CAB361F005D17B2 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					45FBD99D1CAB462D006C368B = {
 						CreatedOnToolsVersion = 7.3;
 					};
 				};
@@ -144,13 +189,21 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				455BE9791CAB361F005D17B2 /* SwiftGenericGeometry */,
+				455BE9791CAB361F005D17B2 /* SwiftGenericGeometry_OSX */,
+				45FBD99D1CAB462D006C368B /* SwiftGenericGeometry_iOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		455BE9781CAB361F005D17B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45FBD99C1CAB462D006C368B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -172,6 +225,21 @@
 				45FBD9881CAB369B006C368B /* Point.swift in Sources */,
 				45FBD9901CAB382B006C368B /* MapKit.swift in Sources */,
 				45FBD9961CAB3EBB006C368B /* LineSegment.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45FBD9991CAB462D006C368B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45FBD9AA1CAB4665006C368B /* CoreGraphics.swift in Sources */,
+				45FBD9A71CAB4665006C368B /* Point.swift in Sources */,
+				45FBD9A81CAB4665006C368B /* Size.swift in Sources */,
+				45FBD9AC1CAB4665006C368B /* IntegerTypes.swift in Sources */,
+				45FBD9A61CAB4665006C368B /* Scalar.swift in Sources */,
+				45FBD9A91CAB4665006C368B /* Rect.swift in Sources */,
+				45FBD9AB1CAB4665006C368B /* MapKit.swift in Sources */,
+				45FBD9AD1CAB4665006C368B /* LineSegment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +373,47 @@
 			};
 			name = Release;
 		};
+		45FBD9A41CAB462D006C368B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = SwiftGenericGeometry/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.schwa.SwiftGenericGeometry;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		45FBD9A51CAB462D006C368B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = SwiftGenericGeometry/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.schwa.SwiftGenericGeometry;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -317,7 +426,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		455BE9821CAB361F005D17B2 /* Build configuration list for PBXNativeTarget "SwiftGenericGeometry" */ = {
+		455BE9821CAB361F005D17B2 /* Build configuration list for PBXNativeTarget "SwiftGenericGeometry_OSX" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				455BE9831CAB361F005D17B2 /* Debug */,
@@ -325,6 +434,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		45FBD9A31CAB462D006C368B /* Build configuration list for PBXNativeTarget "SwiftGenericGeometry_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45FBD9A41CAB462D006C368B /* Debug */,
+				45FBD9A51CAB462D006C368B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
