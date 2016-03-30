@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "45FBD99D1CAB462D006C368B"
-               BuildableName = "SwiftGenericGeometry_iOS.framework"
+               BuildableName = "SwiftGenericGeometry.framework"
                BlueprintName = "SwiftGenericGeometry_iOS"
                ReferencedContainer = "container:SwiftGenericGeometry.xcodeproj">
             </BuildableReference>
@@ -46,7 +46,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "45FBD99D1CAB462D006C368B"
-            BuildableName = "SwiftGenericGeometry_iOS.framework"
+            BuildableName = "SwiftGenericGeometry.framework"
             BlueprintName = "SwiftGenericGeometry_iOS"
             ReferencedContainer = "container:SwiftGenericGeometry.xcodeproj">
          </BuildableReference>
@@ -64,7 +64,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "45FBD99D1CAB462D006C368B"
-            BuildableName = "SwiftGenericGeometry_iOS.framework"
+            BuildableName = "SwiftGenericGeometry.framework"
             BlueprintName = "SwiftGenericGeometry_iOS"
             ReferencedContainer = "container:SwiftGenericGeometry.xcodeproj">
          </BuildableReference>
