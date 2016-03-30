@@ -6,7 +6,6 @@
 //  Copyright © 2016 schwa.io. All rights reserved.
 //
 
-// TODO: Should really be made up of LineSegments
 public protocol LineStringType {
     associatedtype LineSegment: LineSegmentType
     var segments: [LineSegment] { get }
