@@ -25,6 +25,12 @@ public extension PointType {
 
 // MARK: -
 
+public prefix func - <Point: PointType> (other: Point) -> Point {
+    return Point(x: -other.x, y: -other.y)
+}
+
+// MARK: -
+
 public func + <Point: PointType> (lhs: Point, rhs: Point) -> Point {
     return Point(x: lhs.x + rhs.x, y: lhs.y + rhs.y)
 }
@@ -83,3 +89,16 @@ public func crossProduct <Point: PointType> (lhs: Point, _ rhs: Point) -> Point.
 public func perp <Point: PointType> (lhs: Point, _ rhs: Point) -> Point.Scalar {
     return lhs.x * rhs.y - lhs.y * rhs.x
 }
+
+extension PointType where Scalar: MathType {
+
+    var magnitude: Scalar {
+        return sqrt(x * x + y * y)
+    }
+
+    func distanceTo(other: Self) -> Scalar {
+        return (self - other).magnitude
+    }
+
+}
+

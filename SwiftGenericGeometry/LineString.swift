@@ -9,6 +9,7 @@
 // TODO: Remove
 import CoreGraphics
 
+// TODO: Should really be made up of LineSegments
 public protocol LineStringType {
     associatedtype Point: PointType
     var points: [Point] { get }

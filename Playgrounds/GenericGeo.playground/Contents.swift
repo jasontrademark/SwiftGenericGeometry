@@ -1,19 +1,11 @@
 //: Playground - noun: a place where people can play
 
-import Foundation
-import MapKit
-import Cocoa
-import SwiftGenericGeometry
+import CoreGraphics
 
-//
+let items = [ "A", "B", "C", "D" ]
 
+let slices = 0.stride(to: items.count - 1, by: 1)
+    .map() { items[$0 ..< $0 + 2] }
 
-
-//public extension RectType where Point.Scalar == Size.Scalar, Point.Scalar: FloatingPointType {
-
-
-
-
-
-
+dump(slices)
 
