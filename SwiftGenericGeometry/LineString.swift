@@ -25,3 +25,14 @@ public extension LineStringType {
         fatalError()
     }
 }
+
+public extension LineStringType {
+    func toLineSegments <LineSegment: LineSegmentType where LineSegment.Point == Point>() -> [LineSegment] {
+        precondition(points.count % 2 == 0)
+        return 0.stride(to: points.count, by: 2)
+            .map() { points[$0 ..< (min($0 + 2, points.count))] }
+            .map() { ($0[0], $0[1]) }
+            .map() { LineSegment(first: $0, second: $1) }
+    }
+
+}

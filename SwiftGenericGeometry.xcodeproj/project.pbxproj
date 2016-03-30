@@ -14,6 +14,8 @@
 		455BE97E1CAB361F005D17B2 /* SwiftGenericGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = 455BE97D1CAB361F005D17B2 /* SwiftGenericGeometry.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		456936741CAC427A0039A915 /* SwiftGenericGeometryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456936731CAC427A0039A915 /* SwiftGenericGeometryTests.swift */; };
 		456936761CAC427A0039A915 /* SwiftGenericGeometry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 455BE97A1CAB361F005D17B2 /* SwiftGenericGeometry.framework */; };
+		4569367D1CAC47C50039A915 /* Transforms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4569367C1CAC47C50039A915 /* Transforms.swift */; };
+		4569367E1CAC47C50039A915 /* Transforms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4569367C1CAC47C50039A915 /* Transforms.swift */; };
 		45FBD9861CAB367E006C368B /* Scalar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FBD9851CAB367E006C368B /* Scalar.swift */; };
 		45FBD9881CAB369B006C368B /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FBD9871CAB369B006C368B /* Point.swift */; };
 		45FBD98A1CAB36B2006C368B /* CoreGraphics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FBD9891CAB36B2006C368B /* CoreGraphics.swift */; };
@@ -51,6 +53,7 @@
 		456936711CAC427A0039A915 /* SwiftGenericGeometryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftGenericGeometryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		456936731CAC427A0039A915 /* SwiftGenericGeometryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftGenericGeometryTests.swift; sourceTree = "<group>"; };
 		456936751CAC427A0039A915 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4569367C1CAC47C50039A915 /* Transforms.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transforms.swift; sourceTree = "<group>"; };
 		45FBD9841CAB3664006C368B /* GenericGeo.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = GenericGeo.playground; sourceTree = "<group>"; };
 		45FBD9851CAB367E006C368B /* Scalar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scalar.swift; sourceTree = "<group>"; };
 		45FBD9871CAB369B006C368B /* Point.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
@@ -123,6 +126,7 @@
 				45FBD9951CAB3EBB006C368B /* LineSegment.swift */,
 				451C65261CAB59430032ACC8 /* LineString.swift */,
 				451C65231CAB58B10032ACC8 /* Polygon.swift */,
+				4569367C1CAC47C50039A915 /* Transforms.swift */,
 				455BE97F1CAB361F005D17B2 /* Info.plist */,
 			);
 			path = SwiftGenericGeometry;
@@ -293,6 +297,7 @@
 				45FBD98A1CAB36B2006C368B /* CoreGraphics.swift in Sources */,
 				45FBD9861CAB367E006C368B /* Scalar.swift in Sources */,
 				45FBD98E1CAB3708006C368B /* Rect.swift in Sources */,
+				4569367D1CAC47C50039A915 /* Transforms.swift in Sources */,
 				451C65271CAB59430032ACC8 /* LineString.swift in Sources */,
 				45FBD9921CAB3A4D006C368B /* IntegerTypes.swift in Sources */,
 				451C65241CAB58B10032ACC8 /* Polygon.swift in Sources */,
@@ -318,6 +323,7 @@
 				45FBD9A71CAB4665006C368B /* Point.swift in Sources */,
 				45FBD9A81CAB4665006C368B /* Size.swift in Sources */,
 				45FBD9AC1CAB4665006C368B /* IntegerTypes.swift in Sources */,
+				4569367E1CAC47C50039A915 /* Transforms.swift in Sources */,
 				451C65281CAB59460032ACC8 /* LineString.swift in Sources */,
 				45FBD9A61CAB4665006C368B /* Scalar.swift in Sources */,
 				451C65251CAB59010032ACC8 /* Polygon.swift in Sources */,
@@ -556,6 +562,7 @@
 				4569367A1CAC427A0039A915 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		45FBD9A31CAB462D006C368B /* Build configuration list for PBXNativeTarget "SwiftGenericGeometry_iOS" */ = {
 			isa = XCConfigurationList;
