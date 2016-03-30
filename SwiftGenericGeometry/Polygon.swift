@@ -6,6 +6,6 @@
 //  Copyright © 2016 schwa.io. All rights reserved.
 //
 
-protocol PolygonType: LineStringType {
+public protocol PolygonType: LineStringType {
 }
 

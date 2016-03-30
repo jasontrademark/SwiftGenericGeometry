@@ -26,9 +26,29 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      codeCoverageEnabled = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "456936701CAC427A0039A915"
+               BuildableName = "SwiftGenericGeometryTests.xctest"
+               BlueprintName = "SwiftGenericGeometryTests"
+               ReferencedContainer = "container:SwiftGenericGeometry.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "455BE9791CAB361F005D17B2"
+            BuildableName = "SwiftGenericGeometry.framework"
+            BlueprintName = "SwiftGenericGeometry_OSX"
+            ReferencedContainer = "container:SwiftGenericGeometry.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>

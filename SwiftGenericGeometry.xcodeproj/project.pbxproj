@@ -12,6 +12,8 @@
 		451C65271CAB59430032ACC8 /* LineString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451C65261CAB59430032ACC8 /* LineString.swift */; };
 		451C65281CAB59460032ACC8 /* LineString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451C65261CAB59430032ACC8 /* LineString.swift */; };
 		455BE97E1CAB361F005D17B2 /* SwiftGenericGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = 455BE97D1CAB361F005D17B2 /* SwiftGenericGeometry.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		456936741CAC427A0039A915 /* SwiftGenericGeometryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456936731CAC427A0039A915 /* SwiftGenericGeometryTests.swift */; };
+		456936761CAC427A0039A915 /* SwiftGenericGeometry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 455BE97A1CAB361F005D17B2 /* SwiftGenericGeometry.framework */; };
 		45FBD9861CAB367E006C368B /* Scalar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FBD9851CAB367E006C368B /* Scalar.swift */; };
 		45FBD9881CAB369B006C368B /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FBD9871CAB369B006C368B /* Point.swift */; };
 		45FBD98A1CAB36B2006C368B /* CoreGraphics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FBD9891CAB36B2006C368B /* CoreGraphics.swift */; };
@@ -30,12 +32,25 @@
 		45FBD9AD1CAB4665006C368B /* LineSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FBD9951CAB3EBB006C368B /* LineSegment.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		456936771CAC427A0039A915 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 455BE9711CAB361F005D17B2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 455BE9791CAB361F005D17B2;
+			remoteInfo = SwiftGenericGeometry_OSX;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		451C65231CAB58B10032ACC8 /* Polygon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Polygon.swift; sourceTree = "<group>"; };
 		451C65261CAB59430032ACC8 /* LineString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineString.swift; sourceTree = "<group>"; };
 		455BE97A1CAB361F005D17B2 /* SwiftGenericGeometry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftGenericGeometry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		455BE97D1CAB361F005D17B2 /* SwiftGenericGeometry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftGenericGeometry.h; sourceTree = "<group>"; };
 		455BE97F1CAB361F005D17B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		456936711CAC427A0039A915 /* SwiftGenericGeometryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftGenericGeometryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		456936731CAC427A0039A915 /* SwiftGenericGeometryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftGenericGeometryTests.swift; sourceTree = "<group>"; };
+		456936751CAC427A0039A915 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45FBD9841CAB3664006C368B /* GenericGeo.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = GenericGeo.playground; sourceTree = "<group>"; };
 		45FBD9851CAB367E006C368B /* Scalar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scalar.swift; sourceTree = "<group>"; };
 		45FBD9871CAB369B006C368B /* Point.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
@@ -56,6 +71,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4569366E1CAC427A0039A915 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				456936761CAC427A0039A915 /* SwiftGenericGeometry.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		45FBD99A1CAB462D006C368B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -71,6 +94,7 @@
 			children = (
 				45FBD9831CAB3664006C368B /* Playgrounds */,
 				455BE97C1CAB361F005D17B2 /* SwiftGenericGeometry */,
+				456936721CAC427A0039A915 /* SwiftGenericGeometryTests */,
 				455BE97B1CAB361F005D17B2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -80,6 +104,7 @@
 			children = (
 				455BE97A1CAB361F005D17B2 /* SwiftGenericGeometry.framework */,
 				45FBD99E1CAB462D006C368B /* SwiftGenericGeometry.framework */,
+				456936711CAC427A0039A915 /* SwiftGenericGeometryTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -101,6 +126,15 @@
 				455BE97F1CAB361F005D17B2 /* Info.plist */,
 			);
 			path = SwiftGenericGeometry;
+			sourceTree = "<group>";
+		};
+		456936721CAC427A0039A915 /* SwiftGenericGeometryTests */ = {
+			isa = PBXGroup;
+			children = (
+				456936731CAC427A0039A915 /* SwiftGenericGeometryTests.swift */,
+				456936751CAC427A0039A915 /* Info.plist */,
+			);
+			path = SwiftGenericGeometryTests;
 			sourceTree = "<group>";
 		};
 		45FBD9831CAB3664006C368B /* Playgrounds */ = {
@@ -150,6 +184,24 @@
 			productReference = 455BE97A1CAB361F005D17B2 /* SwiftGenericGeometry.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		456936701CAC427A0039A915 /* SwiftGenericGeometryTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4569367B1CAC427A0039A915 /* Build configuration list for PBXNativeTarget "SwiftGenericGeometryTests" */;
+			buildPhases = (
+				4569366D1CAC427A0039A915 /* Sources */,
+				4569366E1CAC427A0039A915 /* Frameworks */,
+				4569366F1CAC427A0039A915 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				456936781CAC427A0039A915 /* PBXTargetDependency */,
+			);
+			name = SwiftGenericGeometryTests;
+			productName = SwiftGenericGeometryTests;
+			productReference = 456936711CAC427A0039A915 /* SwiftGenericGeometryTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		45FBD99D1CAB462D006C368B /* SwiftGenericGeometry_iOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 45FBD9A31CAB462D006C368B /* Build configuration list for PBXNativeTarget "SwiftGenericGeometry_iOS" */;
@@ -174,10 +226,14 @@
 		455BE9711CAB361F005D17B2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = schwa.io;
 				TargetAttributes = {
 					455BE9791CAB361F005D17B2 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					456936701CAC427A0039A915 = {
 						CreatedOnToolsVersion = 7.3;
 					};
 					45FBD99D1CAB462D006C368B = {
@@ -199,12 +255,20 @@
 			targets = (
 				455BE9791CAB361F005D17B2 /* SwiftGenericGeometry_OSX */,
 				45FBD99D1CAB462D006C368B /* SwiftGenericGeometry_iOS */,
+				456936701CAC427A0039A915 /* SwiftGenericGeometryTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		455BE9781CAB361F005D17B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4569366F1CAC427A0039A915 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -238,6 +302,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4569366D1CAC427A0039A915 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				456936741CAC427A0039A915 /* SwiftGenericGeometryTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		45FBD9991CAB462D006C368B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -256,6 +328,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		456936781CAC427A0039A915 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 455BE9791CAB361F005D17B2 /* SwiftGenericGeometry_OSX */;
+			targetProxy = 456936771CAC427A0039A915 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		455BE9801CAB361F005D17B2 /* Debug */ = {
@@ -387,6 +467,28 @@
 			};
 			name = Release;
 		};
+		456936791CAC427A0039A915 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SwiftGenericGeometryTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.schwa.SwiftGenericGeometryTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4569367A1CAC427A0039A915 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SwiftGenericGeometryTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.schwa.SwiftGenericGeometryTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		45FBD9A41CAB462D006C368B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -446,6 +548,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		4569367B1CAC427A0039A915 /* Build configuration list for PBXNativeTarget "SwiftGenericGeometryTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				456936791CAC427A0039A915 /* Debug */,
+				4569367A1CAC427A0039A915 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		45FBD9A31CAB462D006C368B /* Build configuration list for PBXNativeTarget "SwiftGenericGeometry_iOS" */ = {
 			isa = XCConfigurationList;

@@ -105,19 +105,19 @@ public extension RectType where Point.Scalar == Size.Scalar {
         self.init(origin: Point(x: minX, y: minY), size: Size(width: maxX - minX, height: maxY - minY))
     }
 
-    var minXminY: Point {
+    var minXMinY: Point {
         return Point(x: minX, y: minY)
     }
 
-    var minXmaxY: Point {
+    var minXMaxY: Point {
         return Point(x: minX, y: maxY)
     }
 
-    var maxXminY: Point {
+    var maxXMinY: Point {
         return Point(x: maxX, y: minY)
     }
 
-    var maxXmaxY: Point {
+    var maxXMaxY: Point {
         return Point(x: maxX, y: maxY)
     }
 }
@@ -148,6 +148,32 @@ public extension RectType where Point.Scalar == Size.Scalar, Point.Scalar: Float
 
     var mid: Point {
         return Point(x: midX, y: midY)
+    }
+}
+
+// MARK: -
+
+public extension RectType where Point.Scalar == Size.Scalar {
+    @warn_unused_result
+    func union(point: Point) -> Self {
+//            let p1 = min(minXminY, point)
+//            let p2 = max(maxXmaxY, point)
+//            return Self(points: (p1, p2))
+
+        let minX = min(self.minX, point.x)
+        let minY = min(self.minY, point.y)
+        let maxX = max(self.maxX, point.x)
+        let maxY = max(self.maxY, point.y)
+        return Self(minX: minX, minY: minY, maxX: maxX, maxY: maxY)
+    }
+
+    @warn_unused_result
+    func union(rect: Self) -> Self {
+        let minX = min(self.minX, rect.minX)
+        let minY = min(self.minY, rect.minY)
+        let maxX = max(self.maxX, rect.maxX)
+        let maxY = max(self.maxY, rect.maxY)
+        return Self(minX: minX, minY: minY, maxX: maxX, maxY: maxY)
     }
 }
 
