@@ -6,8 +6,6 @@
 //  Copyright © 2016 schwa.io. All rights reserved.
 //
 
-import Foundation
-
 public struct IntPoint: PointType {
     public var x: Int
     public var y: Int

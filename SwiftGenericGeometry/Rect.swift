@@ -197,3 +197,18 @@ public extension RectType where Point.Scalar == Size.Scalar, Point.Scalar: Compa
         return xInterval.contains(point.x) && yInterval.contains(point.y)
     }
 }
+
+// MARK: -
+
+extension SequenceType where Generator.Element: PointType, Generator.Element.Scalar: FloatingPointType {
+    @warn_unused_result
+    func boundingBox <Rect: RectType where Rect.Point == Generator.Element, Rect.Point.Scalar == Rect.Size.Scalar>() -> Rect {
+        return reduce(Rect.null) {
+            (accumulator, element) in
+            return accumulator.union(element)
+        }
+    }
+}
+
+
+

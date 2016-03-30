@@ -147,3 +147,4 @@ public extension LineSegmentType where Point.Scalar: FloatingPointType {
 
 
 }
+

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		451C65241CAB58B10032ACC8 /* Polygon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451C65231CAB58B10032ACC8 /* Polygon.swift */; };
+		451C65251CAB59010032ACC8 /* Polygon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451C65231CAB58B10032ACC8 /* Polygon.swift */; };
+		451C65271CAB59430032ACC8 /* LineString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451C65261CAB59430032ACC8 /* LineString.swift */; };
+		451C65281CAB59460032ACC8 /* LineString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451C65261CAB59430032ACC8 /* LineString.swift */; };
 		455BE97E1CAB361F005D17B2 /* SwiftGenericGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = 455BE97D1CAB361F005D17B2 /* SwiftGenericGeometry.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		45FBD9861CAB367E006C368B /* Scalar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FBD9851CAB367E006C368B /* Scalar.swift */; };
 		45FBD9881CAB369B006C368B /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FBD9871CAB369B006C368B /* Point.swift */; };
@@ -27,6 +31,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		451C65231CAB58B10032ACC8 /* Polygon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Polygon.swift; sourceTree = "<group>"; };
+		451C65261CAB59430032ACC8 /* LineString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineString.swift; sourceTree = "<group>"; };
 		455BE97A1CAB361F005D17B2 /* SwiftGenericGeometry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftGenericGeometry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		455BE97D1CAB361F005D17B2 /* SwiftGenericGeometry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftGenericGeometry.h; sourceTree = "<group>"; };
 		455BE97F1CAB361F005D17B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -90,6 +96,8 @@
 				45FBD98F1CAB382B006C368B /* MapKit.swift */,
 				45FBD9911CAB3A4D006C368B /* IntegerTypes.swift */,
 				45FBD9951CAB3EBB006C368B /* LineSegment.swift */,
+				451C65261CAB59430032ACC8 /* LineString.swift */,
+				451C65231CAB58B10032ACC8 /* Polygon.swift */,
 				455BE97F1CAB361F005D17B2 /* Info.plist */,
 			);
 			path = SwiftGenericGeometry;
@@ -221,7 +229,9 @@
 				45FBD98A1CAB36B2006C368B /* CoreGraphics.swift in Sources */,
 				45FBD9861CAB367E006C368B /* Scalar.swift in Sources */,
 				45FBD98E1CAB3708006C368B /* Rect.swift in Sources */,
+				451C65271CAB59430032ACC8 /* LineString.swift in Sources */,
 				45FBD9921CAB3A4D006C368B /* IntegerTypes.swift in Sources */,
+				451C65241CAB58B10032ACC8 /* Polygon.swift in Sources */,
 				45FBD9881CAB369B006C368B /* Point.swift in Sources */,
 				45FBD9901CAB382B006C368B /* MapKit.swift in Sources */,
 				45FBD9961CAB3EBB006C368B /* LineSegment.swift in Sources */,
@@ -236,7 +246,9 @@
 				45FBD9A71CAB4665006C368B /* Point.swift in Sources */,
 				45FBD9A81CAB4665006C368B /* Size.swift in Sources */,
 				45FBD9AC1CAB4665006C368B /* IntegerTypes.swift in Sources */,
+				451C65281CAB59460032ACC8 /* LineString.swift in Sources */,
 				45FBD9A61CAB4665006C368B /* Scalar.swift in Sources */,
+				451C65251CAB59010032ACC8 /* Polygon.swift in Sources */,
 				45FBD9A91CAB4665006C368B /* Rect.swift in Sources */,
 				45FBD9AB1CAB4665006C368B /* MapKit.swift in Sources */,
 				45FBD9AD1CAB4665006C368B /* LineSegment.swift in Sources */,
