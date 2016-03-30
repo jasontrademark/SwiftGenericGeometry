@@ -35,7 +35,7 @@ public extension LineStringType {
 
 public extension LineStringType {
     func toLineSegments <LineSegment: LineSegmentType where LineSegment.Point == Point>() -> [LineSegment] {
-        precondition(points.count % 2 == 0)
+        precondition(points.count >= 2)
         return 0.stride(to: points.count - 1, by: 1)
             .map() { Array(points[$0 ..< $0 + 2]) }
             .map() { ($0[0], $0[1]) }
