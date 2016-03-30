@@ -58,10 +58,10 @@ extension MKMapRect: RectType {
 
 
 public struct MapPolygon: PolygonType {
-    public let points: [MKMapPoint]
+    public let segments: [MapLineSegment]
 
-    public init(points: [MKMapPoint]) {
-        self.points = points
+    public init(segments: [MapLineSegment]) {
+        self.segments = segments
     }
 }
 
