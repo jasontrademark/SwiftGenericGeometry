@@ -9,8 +9,8 @@
 public protocol PointType: Equatable {
     associatedtype Scalar: ScalarType
 
-    var x: Scalar { get }
-    var y: Scalar { get }
+    var x: Scalar { get set }
+    var y: Scalar { get set }
 
     init(x: Scalar, y: Scalar)
 }

@@ -9,8 +9,8 @@
 public protocol SizeType: Equatable {
     associatedtype Scalar: ScalarType
 
-    var width: Scalar { get }
-    var height: Scalar { get }
+    var width: Scalar { get set }
+    var height: Scalar { get set }
 
     init(width: Scalar, height: Scalar)
 }

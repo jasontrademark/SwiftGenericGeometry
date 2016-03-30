@@ -26,6 +26,7 @@ public extension LineStringType where Point == CGPoint {
 }
 
 
+
 // TODO: Fix
 public extension LineStringType {
     func boundingBox <Rect: RectType where Rect.Point == Point, Rect.Point.Scalar == Rect.Size.Scalar> () -> Rect {

@@ -10,8 +10,8 @@ public protocol RectType: Equatable {
     associatedtype Point: PointType
     associatedtype Size: SizeType
 
-    var origin: Point { get }
-    var size: Size { get }
+    var origin: Point { get set }
+    var size: Size { get set }
 
     init(origin: Point, size: Size)
 }
@@ -175,6 +175,16 @@ public extension RectType where Point.Scalar == Size.Scalar {
         let maxY = max(self.maxY, rect.maxY)
         return Self(minX: minX, minY: minY, maxX: maxX, maxY: maxY)
     }
+
+    @warn_unused_result
+    func inset(dx dx: Point.Scalar, dy: Point.Scalar) -> Self {
+        return Self(minX: minX + dx, minY: minY + dy, maxX: maxX - dx, maxY: maxY - dy)
+    }
+
+    mutating func insetInPlace(dx dx: Point.Scalar, dy: Point.Scalar) {
+        self = Self(minX: minX + dx, minY: minY + dy, maxX: maxX - dx, maxY: maxY - dy)
+    }
+
 }
 
 // MARK: -

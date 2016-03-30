@@ -86,6 +86,14 @@ public func == (lhs: MapLineSegment, rhs: MapLineSegment) -> Bool {
 //    }
 //}
 
+// TODO: Remove
+
+public extension LineStringType where Point == MKMapPoint {
+    func boundingBox() -> MKMapRect {
+        return points.boundingBox()
+    }
+}
+
 
 
 
