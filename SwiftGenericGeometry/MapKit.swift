@@ -58,19 +58,19 @@ extension MKMapRect: RectType {
 
 
 public struct MapPolygon: PolygonType {
-    public let points: [CGPoint]
+    public let points: [MKMapPoint]
 
-    public init(points: [CGPoint]) {
+    public init(points: [MKMapPoint]) {
         self.points = points
     }
 }
 
 
 public struct MapLineSegment: LineSegmentType {
-    public let first: CGPoint
-    public let second: CGPoint
+    public let first: MKMapPoint
+    public let second: MKMapPoint
 
-    public init(first: CGPoint, second: CGPoint) {
+    public init(first: MKMapPoint, second: MKMapPoint) {
         self.first = first
         self.second = second
     }
@@ -81,7 +81,7 @@ public func == (lhs: MapLineSegment, rhs: MapLineSegment) -> Bool {
 }
 
 //public extension MapLineSegment {
-//    func transform(transform: CGAffineTransform) -> MapLineSegment {
+//    func transform(transform: MapKitAffineTransform) -> MapLineSegment {
 //        return LineSegment(first: start * transform, second: end * transform)
 //    }
 //}
