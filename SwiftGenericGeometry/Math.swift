@@ -8,16 +8,16 @@
 
 import Darwin
 
-protocol MathType: AbsoluteValuable {
+public protocol MathType: AbsoluteValuable {
     static func sqrt(x: Self) -> Self
 }
 
-func sqrt <T: MathType> (x: T) -> T {
+public func sqrt <T: MathType> (x: T) -> T {
     return T.sqrt(x)
 }
 
 extension Double: MathType {
-    static func sqrt(x: Double) -> Double {
+    public static func sqrt(x: Double) -> Double {
         return Darwin.sqrt(x)
     }
 }
