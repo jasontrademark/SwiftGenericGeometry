@@ -57,6 +57,16 @@ extension MKMapRect: RectType {
 // MARK: -
 
 
+public struct MapLineString: LineStringType {
+    public let segments: [MapLineSegment]
+
+    public init(segments: [MapLineSegment]) {
+        self.segments = segments
+    }
+}
+
+
+
 public struct MapPolygon: PolygonType {
     public let segments: [MapLineSegment]
 
@@ -79,3 +89,6 @@ public struct MapLineSegment: LineSegmentType {
 public func == (lhs: MapLineSegment, rhs: MapLineSegment) -> Bool {
     return lhs.first == rhs.first && lhs.second == rhs.second
 }
+
+
+

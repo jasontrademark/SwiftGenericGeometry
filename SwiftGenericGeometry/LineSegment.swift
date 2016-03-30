@@ -59,6 +59,7 @@ public extension LineSegmentType where Point.Scalar: FloatingPointType {
         }
     }
 
+    // Adapted from: http://geomalgorithms.com/a05-_intersect-1.html
     func advancedIntersection(other: Self) -> LineSegmentIntersection <Self> {
 
         let SMALL_NUM = Point.Scalar(0.00000001)

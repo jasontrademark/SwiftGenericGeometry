@@ -6,6 +6,7 @@
 //  Copyright © 2016 schwa.io. All rights reserved.
 //
 
+// TODO: Rename to Polyline?
 public protocol LineStringType {
     associatedtype LineSegment: LineSegmentType
     var segments: [LineSegment] { get }
