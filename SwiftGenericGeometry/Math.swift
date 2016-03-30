@@ -6,6 +6,8 @@
 //  Copyright © 2016 schwa.io. All rights reserved.
 //
 
+import Darwin
+
 protocol MathType: AbsoluteValuable {
     static func sqrt(x: Self) -> Self
 }
