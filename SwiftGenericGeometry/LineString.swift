@@ -6,9 +6,6 @@
 //  Copyright © 2016 schwa.io. All rights reserved.
 //
 
-// TODO: Remove
-import CoreGraphics
-
 // TODO: Should really be made up of LineSegments
 public protocol LineStringType {
     associatedtype Point: PointType
@@ -17,25 +14,15 @@ public protocol LineStringType {
     init(points: [Point])
 }
 
-
-// TODO: Remove
-public extension LineStringType where Point == CGPoint {
-    func boundingBox() -> CGRect {
+public extension LineStringType where Point.Scalar: FloatingPointType {
+    @warn_unused_result
+    func boundingBox <Rect: RectType where Rect.Point.Scalar: FloatingPointType, Rect.Point.Scalar == Rect.Size.Scalar, Point == Rect.Point> () -> Rect {
         return points.boundingBox()
     }
 }
 
-
-
-// TODO: Fix
 public extension LineStringType {
-    func boundingBox <Rect: RectType where Rect.Point == Point, Rect.Point.Scalar == Rect.Size.Scalar> () -> Rect {
-//        return points.boundingBox()
-        fatalError()
-    }
-}
-
-public extension LineStringType {
+    @warn_unused_result
     func toLineSegments <LineSegment: LineSegmentType where LineSegment.Point == Point>() -> [LineSegment] {
         precondition(points.count >= 2)
         return 0.stride(to: points.count - 1, by: 1)

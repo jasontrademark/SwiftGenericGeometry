@@ -12,10 +12,12 @@
 		451C65271CAB59430032ACC8 /* LineString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451C65261CAB59430032ACC8 /* LineString.swift */; };
 		451C65281CAB59460032ACC8 /* LineString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451C65261CAB59430032ACC8 /* LineString.swift */; };
 		455BE97E1CAB361F005D17B2 /* SwiftGenericGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = 455BE97D1CAB361F005D17B2 /* SwiftGenericGeometry.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		456936741CAC427A0039A915 /* SwiftGenericGeometryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456936731CAC427A0039A915 /* SwiftGenericGeometryTests.swift */; };
+		456936741CAC427A0039A915 /* IntTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456936731CAC427A0039A915 /* IntTests.swift */; };
 		456936761CAC427A0039A915 /* SwiftGenericGeometry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 455BE97A1CAB361F005D17B2 /* SwiftGenericGeometry.framework */; };
 		4569367D1CAC47C50039A915 /* Transforms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4569367C1CAC47C50039A915 /* Transforms.swift */; };
 		4569367E1CAC47C50039A915 /* Transforms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4569367C1CAC47C50039A915 /* Transforms.swift */; };
+		4583FE101CAC8260005BAB82 /* CoreGraphicsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4583FE0E1CAC8260005BAB82 /* CoreGraphicsTests.swift */; };
+		4583FE111CAC8260005BAB82 /* MapKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4583FE0F1CAC8260005BAB82 /* MapKitTests.swift */; };
 		45C201571CAC6E3C001C0EC7 /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C201561CAC6E3C001C0EC7 /* Math.swift */; };
 		45C201581CAC6E3C001C0EC7 /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C201561CAC6E3C001C0EC7 /* Math.swift */; };
 		45FBD9861CAB367E006C368B /* Scalar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FBD9851CAB367E006C368B /* Scalar.swift */; };
@@ -53,9 +55,11 @@
 		455BE97D1CAB361F005D17B2 /* SwiftGenericGeometry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftGenericGeometry.h; sourceTree = "<group>"; };
 		455BE97F1CAB361F005D17B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		456936711CAC427A0039A915 /* SwiftGenericGeometryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftGenericGeometryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		456936731CAC427A0039A915 /* SwiftGenericGeometryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftGenericGeometryTests.swift; sourceTree = "<group>"; };
+		456936731CAC427A0039A915 /* IntTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntTests.swift; sourceTree = "<group>"; };
 		456936751CAC427A0039A915 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4569367C1CAC47C50039A915 /* Transforms.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transforms.swift; sourceTree = "<group>"; };
+		4583FE0E1CAC8260005BAB82 /* CoreGraphicsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreGraphicsTests.swift; sourceTree = "<group>"; };
+		4583FE0F1CAC8260005BAB82 /* MapKitTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapKitTests.swift; sourceTree = "<group>"; };
 		45C201561CAC6E3C001C0EC7 /* Math.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
 		45FBD9841CAB3664006C368B /* GenericGeo.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = GenericGeo.playground; sourceTree = "<group>"; };
 		45FBD9851CAB367E006C368B /* Scalar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scalar.swift; sourceTree = "<group>"; };
@@ -139,7 +143,9 @@
 		456936721CAC427A0039A915 /* SwiftGenericGeometryTests */ = {
 			isa = PBXGroup;
 			children = (
-				456936731CAC427A0039A915 /* SwiftGenericGeometryTests.swift */,
+				456936731CAC427A0039A915 /* IntTests.swift */,
+				4583FE0E1CAC8260005BAB82 /* CoreGraphicsTests.swift */,
+				4583FE0F1CAC8260005BAB82 /* MapKitTests.swift */,
 				456936751CAC427A0039A915 /* Info.plist */,
 			);
 			path = SwiftGenericGeometryTests;
@@ -316,7 +322,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				456936741CAC427A0039A915 /* SwiftGenericGeometryTests.swift in Sources */,
+				4583FE111CAC8260005BAB82 /* MapKitTests.swift in Sources */,
+				456936741CAC427A0039A915 /* IntTests.swift in Sources */,
+				4583FE101CAC8260005BAB82 /* CoreGraphicsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

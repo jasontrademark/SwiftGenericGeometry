@@ -79,22 +79,3 @@ public struct MapLineSegment: LineSegmentType {
 public func == (lhs: MapLineSegment, rhs: MapLineSegment) -> Bool {
     return lhs.first == rhs.first && lhs.second == rhs.second
 }
-
-//public extension MapLineSegment {
-//    func transform(transform: MapKitAffineTransform) -> MapLineSegment {
-//        return LineSegment(first: start * transform, second: end * transform)
-//    }
-//}
-
-// TODO: Remove
-
-public extension LineStringType where Point == MKMapPoint {
-    func boundingBox() -> MKMapRect {
-        return points.boundingBox()
-    }
-}
-
-
-
-
-
