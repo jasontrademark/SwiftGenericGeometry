@@ -23,13 +23,17 @@ extension CGRect: RectType {
 // MARK: -
 
 public struct Polygon: PolygonType {
-    public var points: [CGPoint] = []
+    public let points: [CGPoint]
+
+    public init(points: [CGPoint]) {
+        self.points = points
+    }
 }
 
 
 public struct LineSegment: LineSegmentType {
-    public var first: CGPoint
-    public var second: CGPoint
+    public let first: CGPoint
+    public let second: CGPoint
 
     // TODO: KILL
     public var start: CGPoint {
@@ -50,7 +54,7 @@ public func == (lhs: LineSegment, rhs: LineSegment) -> Bool {
     return lhs.first == rhs.first && lhs.second == rhs.second
 }
 
-extension LineSegment {
+public extension LineSegment {
     func transform(transform: CGAffineTransform) -> LineSegment {
         return LineSegment(first: start * transform, second: end * transform)
     }

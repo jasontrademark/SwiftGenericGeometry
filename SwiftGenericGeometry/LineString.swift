@@ -12,6 +12,8 @@ import CoreGraphics
 public protocol LineStringType {
     associatedtype Point: PointType
     var points: [Point] { get }
+
+    init(points: [Point])
 }
 
 
