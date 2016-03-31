@@ -123,11 +123,11 @@ public extension LineSegmentType where Point.Scalar: FloatingPointType {
             t0 = t0 < 0 ? 0 : t0               // clip to min 0
             t1 = t1 > 1 ? 1 : t1               // clip to max 1
             if t0 == t1 {                  // intersect is a point
-                return .Intersect(S2.first + v * t0)
+                return .Intersect(S2.first + t0 * v)
             }
 
             // they overlap in a valid subsegment
-            return .Overlap(Self(first: S2.first + v * t0, second: S2.first + v * t1))
+            return .Overlap(Self(first: S2.first + t0 * v, second: S2.first + t1 * v))
         }
 
         // the segments are skew and may intersect in a point
@@ -143,9 +143,8 @@ public extension LineSegmentType where Point.Scalar: FloatingPointType {
             return .None
         }
 
-        return .Intersect(S1.first + u * sI)
+        return .Intersect(S1.first + sI * u)
     }
-
 
 }
 

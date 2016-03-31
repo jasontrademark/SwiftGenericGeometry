@@ -39,3 +39,11 @@ public extension LineStringType where LineSegment.Point.Scalar: FloatingPointTyp
         return points.boundingBox()
     }
 }
+
+public extension LineStringType where LineSegment.Point.Scalar: FloatingPointType {
+
+    func intersections(segment: LineSegment) -> [LineSegment.Point] {
+        return segments.flatMap() { $0.intersection(segment) }
+    }
+
+}

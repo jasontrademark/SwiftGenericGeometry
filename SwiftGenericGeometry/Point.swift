@@ -47,8 +47,14 @@ public func / <Point: PointType> (lhs: Point, rhs: Point) -> Point {
     return Point(x: lhs.x / rhs.x, y: lhs.y / rhs.y)
 }
 
+// MARK: -
+
 public func * <Point: PointType> (lhs: Point, rhs: Point.Scalar) -> Point {
     return Point(x: lhs.x * rhs, y: lhs.y * rhs)
+}
+
+public func * <Point: PointType> (lhs: Point.Scalar, rhs: Point) -> Point {
+    return Point(x: lhs * rhs.x, y: lhs * rhs.y)
 }
 
 public func / <Point: PointType> (lhs: Point, rhs: Point.Scalar) -> Point {
