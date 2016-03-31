@@ -29,10 +29,10 @@ extension CGRect: RectType {
 // MARK: -
 
 public struct Polygon: PolygonType {
-    public let segments: [LineSegment]
+    public let points: [CGPoint]
 
-    public init(segments: [LineSegment]) {
-        self.segments = segments
+    public init(points: [CGPoint]) {
+        self.points = points
     }
 }
 

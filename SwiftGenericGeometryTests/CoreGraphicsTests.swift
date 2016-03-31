@@ -41,7 +41,7 @@ class CoreGraphicsTests: XCTestCase {
             CGPoint(x: 0, y: 100),
         ])
 
-        let segments: [LineSegment] = polygon.segments
+        let segments:[LineSegment] = polygon.toLineSegments()
 
         XCTAssert(segments[0] == LineSegment(first: CGPoint(x: 0, y: 0), second: CGPoint(x: 100, y: 0)))
         XCTAssert(segments[1] == LineSegment(first: CGPoint(x: 100, y: 0), second: CGPoint(x: 100, y: 100)))

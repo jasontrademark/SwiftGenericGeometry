@@ -68,10 +68,10 @@ public struct MapLineString: LineStringType {
 
 
 public struct MapPolygon: PolygonType {
-    public let segments: [MapLineSegment]
+    public let points: [MKMapPoint]
 
-    public init(segments: [MapLineSegment]) {
-        self.segments = segments
+    public init(points: [MKMapPoint]) {
+        self.points = points
     }
 }
 

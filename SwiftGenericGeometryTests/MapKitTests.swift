@@ -42,7 +42,7 @@ class MapKitTests: XCTestCase {
             MKMapPoint(x: 0, y: 100),
         ])
 
-        let segments: [MapLineSegment] = polygon.segments
+        let segments:[MapLineSegment] = polygon.toLineSegments()
 
         XCTAssert(segments[0] == MapLineSegment(first: MKMapPoint(x: 0, y: 0), second: MKMapPoint(x: 100, y: 0)))
         XCTAssert(segments[1] == MapLineSegment(first: MKMapPoint(x: 100, y: 0), second: MKMapPoint(x: 100, y: 100)))
@@ -66,22 +66,4 @@ class MapKitTests: XCTestCase {
         XCTAssert(polygon.boundingBox() == MKMapRect(x: 0, y:0, width: 100, height: 100))
     }
 
-    func testComplexBB() {
-
-        let values: [Double] = [
-           416, 803,
-           0,   0,
-           0,   1022,
-           852, 1022,
-           852, 0
-        ]
-
-        let points: [MKMapPoint] = 0.stride(to: values.count, by: 2).map() {
-            let slice = Array(values[$0 ..< $0 + 2])
-            return MKMapPoint(x: slice[0] - 200, y: slice[1])
-        }
-
-        let polygon = MapPolygon(points: points)
-        XCTAssertEqual(polygon.boundingBox() as MKMapRect, MKMapRect(x: -200, y:0, width: 852, height: 1022))
-    }
 }
