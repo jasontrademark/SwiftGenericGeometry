@@ -58,10 +58,10 @@ extension MKMapRect: RectType {
 
 
 public struct MapLineString: LineStringType {
-    public let segments: [MapLineSegment]
+    public let points: [MKMapPoint]
 
-    public init(segments: [MapLineSegment]) {
-        self.segments = segments
+    public init(points: [MKMapPoint]) {
+        self.points = points
     }
 }
 
