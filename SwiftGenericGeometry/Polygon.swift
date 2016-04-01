@@ -45,7 +45,6 @@ public extension PolygonType where Point.Scalar: FloatingPointType {
 
     func intersections <LineSegment: LineSegmentType where LineSegment.Point == Point> (segment: LineSegment) -> [Point] {
         let segments: [LineSegment] = toLineSegments()
-        print(segments.count)
         return segments.flatMap() {
             return $0.intersection(segment)
         }
