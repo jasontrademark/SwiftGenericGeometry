@@ -98,6 +98,7 @@ public func perp <Point: PointType> (lhs: Point, _ rhs: Point) -> Point.Scalar {
 
 public extension PointType where Scalar: MathType {
 
+    // TODO: Convert to func
     var magnitude: Scalar {
         return sqrt(x * x + y * y)
     }

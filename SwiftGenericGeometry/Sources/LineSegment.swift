@@ -42,7 +42,6 @@ public extension LineSegmentType {
 // MARK: -
 
 public enum LineSegmentIntersection <LineSegment: LineSegmentType> {
-    case None
     case Disjoint
     case Intersect(LineSegment.Point)
     case Overlap(LineSegment)
@@ -75,7 +74,7 @@ public extension LineSegmentType where Point.Scalar: FloatingPointType {
         // test if they are parallel (includes either being a point)
         if abs(D) < SMALL_NUM {           // S1 and S2 are parallel
             if perp(u, w) != 0 || perp(v, w) != 0 {
-                return .None                    // they are NOT collinear
+                return .Disjoint                    // they are NOT collinear
             }
             // they are collinear or degenerate
             // check if they are degenerate points
@@ -89,13 +88,13 @@ public extension LineSegmentType where Point.Scalar: FloatingPointType {
             }
             if du == 0 {                     // S1 is a single point
                 if S2.containsPoint(S1.first) == false { // but is not in S2
-                    return .None
+                    return .Disjoint
                 }
                 return .Intersect(S1.first)
             }
             if dv == 0 {                     // S2 a single point
                 if S1.containsPoint(S2.first) == false { // but is not in S1
-                    return .None
+                    return .Disjoint
                 }
             return .Intersect(S2.first)
             }
@@ -118,7 +117,7 @@ public extension LineSegmentType where Point.Scalar: FloatingPointType {
             }
             // NO overlap
             if t0 > 1 || t1 < 0 {
-                return .None
+                return .Disjoint
             }
             t0 = t0 < 0 ? 0 : t0               // clip to min 0
             t1 = t1 > 1 ? 1 : t1               // clip to max 1
@@ -134,13 +133,13 @@ public extension LineSegmentType where Point.Scalar: FloatingPointType {
         // get the intersect parameter for S1
         let sI = perp(v, w) / D
         if sI < 0 || sI > 1 {               // no intersect with S1
-            return .None
+            return .Disjoint
         }
 
         // get the intersect parameter for S2
         let tI = perp(u, w) / D
         if tI < 0 || tI > 1 {               // no intersect with S2
-            return .None
+            return .Disjoint
         }
 
         return .Intersect(S1.first + sI * u)
