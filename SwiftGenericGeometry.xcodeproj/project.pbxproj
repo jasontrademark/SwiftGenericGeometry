@@ -254,9 +254,11 @@
 				TargetAttributes = {
 					455BE9791CAB361F005D17B2 = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0800;
 					};
 					456936701CAC427A0039A915 = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0800;
 					};
 					45FBD99D1CAB462D006C368B = {
 						CreatedOnToolsVersion = 7.3;
@@ -473,6 +475,7 @@
 				PRODUCT_NAME = SwiftGenericGeometry;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -493,6 +496,7 @@
 				PRODUCT_NAME = SwiftGenericGeometry;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
@@ -504,6 +508,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.schwa.SwiftGenericGeometryTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -516,6 +521,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.schwa.SwiftGenericGeometryTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
