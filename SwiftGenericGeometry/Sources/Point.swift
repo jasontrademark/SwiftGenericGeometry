@@ -63,36 +63,36 @@ public func / <Point: PointType> (lhs: Point, rhs: Point.Scalar) -> Point {
 
 // MARK: -
 
-public func + <Point: PointType, Size: SizeType where Point.Scalar == Size.Scalar> (lhs: Point, rhs: Size) -> Point {
+public func + <Point: PointType, Size: SizeType> (lhs: Point, rhs: Size) -> Point where Point.Scalar == Size.Scalar {
     return Point(x: lhs.x + rhs.width, y: lhs.y + rhs.height)
 }
 
-public func - <Point: PointType, Size: SizeType where Point.Scalar == Size.Scalar> (lhs: Point, rhs: Size) -> Point {
+public func - <Point: PointType, Size: SizeType> (lhs: Point, rhs: Size) -> Point where Point.Scalar == Size.Scalar {
     return Point(x: lhs.x - rhs.width, y: lhs.y - rhs.height)
 }
 
 // MARK: -
 
-public func min <Point: PointType where Point.Scalar: Comparable> (lhs: Point, _ rhs: Point) -> Point {
+public func min <Point: PointType> (_ lhs: Point, _ rhs: Point) -> Point where Point.Scalar: Comparable {
     return Point(x: min(lhs.x, rhs.x), y: min(lhs.y, rhs.y))
 }
 
-public func max <Point: PointType where Point.Scalar: Comparable> (lhs: Point, _ rhs: Point) -> Point {
+public func max <Point: PointType> (_ lhs: Point, _ rhs: Point) -> Point where Point.Scalar: Comparable {
     return Point(x: max(lhs.x, rhs.x), y: max(lhs.y, rhs.y))
 }
 
 // MARK: -
 
-public func dotProduct <Point: PointType> (lhs: Point, _ rhs: Point) -> Point.Scalar {
+public func dotProduct <Point: PointType> (_ lhs: Point, _ rhs: Point) -> Point.Scalar {
     return lhs.x * rhs.x + lhs.y * rhs.y
 }
 
-public func crossProduct <Point: PointType> (lhs: Point, _ rhs: Point) -> Point.Scalar {
+public func crossProduct <Point: PointType> (_ lhs: Point, _ rhs: Point) -> Point.Scalar {
     return lhs.x * rhs.y - lhs.y * rhs.x
 }
 
 // TODO: Rename perpProduct?
-public func perp <Point: PointType> (lhs: Point, _ rhs: Point) -> Point.Scalar {
+public func perp <Point: PointType> (_ lhs: Point, _ rhs: Point) -> Point.Scalar {
     return lhs.x * rhs.y - lhs.y * rhs.x
 }
 
@@ -103,7 +103,7 @@ public extension PointType where Scalar: MathType {
         return sqrt(x * x + y * y)
     }
 
-    func distanceTo(other: Self) -> Scalar {
+    func distanceTo(_ other: Self) -> Scalar {
         return (self - other).magnitude
     }
 

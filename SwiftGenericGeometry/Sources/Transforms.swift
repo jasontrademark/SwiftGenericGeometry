@@ -9,5 +9,5 @@
 import CoreGraphics
 
 public func * (lhs: CGPoint, rhs: CGAffineTransform) -> CGPoint {
-    return CGPointApplyAffineTransform(lhs, rhs)
+    return lhs.applying(rhs)
 }

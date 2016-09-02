@@ -12,7 +12,7 @@ extension CGFloat: ScalarType {
 }
 
 extension CGFloat: MathType {
-    public static func sqrt(x: CGFloat) -> CGFloat {
+    public static func sqrt(_ x: CGFloat) -> CGFloat {
         return CoreGraphics.sqrt(x)
     }
 }

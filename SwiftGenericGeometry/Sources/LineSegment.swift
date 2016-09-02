@@ -17,7 +17,7 @@ public protocol LineSegmentType: Equatable {
 
 public extension LineSegmentType {
 
-    func containsPoint(point: Point) -> Bool {
+    func containsPoint(_ point: Point) -> Bool {
         if first.x != second.x {    // self is not vertical
             if first.x <= point.x && point.x <= second.x {
                 return true
@@ -42,15 +42,15 @@ public extension LineSegmentType {
 // MARK: -
 
 public enum LineSegmentIntersection <LineSegment: LineSegmentType> {
-    case Disjoint
-    case Intersect(LineSegment.Point)
-    case Overlap(LineSegment)
+    case disjoint
+    case intersect(LineSegment.Point)
+    case overlap(LineSegment)
 }
 
-public extension LineSegmentType where Point.Scalar: FloatingPointType {
+public extension LineSegmentType where Point.Scalar: FloatingPoint {
 
-    public func intersection(other: Self) -> Point? {
-        if case .Intersect(let intersection) = advancedIntersection(other) {
+    public func intersection(_ other: Self) -> Point? {
+        if case .intersect(let intersection) = advancedIntersection(other) {
             return intersection
         }
         else {
@@ -59,7 +59,7 @@ public extension LineSegmentType where Point.Scalar: FloatingPointType {
     }
 
     // Adapted from: http://geomalgorithms.com/a05-_intersect-1.html
-    func advancedIntersection(other: Self) -> LineSegmentIntersection <Self> {
+    func advancedIntersection(_ other: Self) -> LineSegmentIntersection <Self> {
 
         let SMALL_NUM = Point.Scalar(0.00000001)
 
@@ -69,12 +69,12 @@ public extension LineSegmentType where Point.Scalar: FloatingPointType {
         let u = S1.second - S1.first
         let v = S2.second - S2.first
         let w = S1.first - S2.first
-        let D = perp(u,v)
+        let D = perp(v,u)
 
         // test if they are parallel (includes either being a point)
         if abs(D) < SMALL_NUM {           // S1 and S2 are parallel
-            if perp(u, w) != 0 || perp(v, w) != 0 {
-                return .Disjoint                    // they are NOT collinear
+            if perp(w, u) != 0 || perp(v, w) != 0 {
+                return .disjoint                    // they are NOT collinear
             }
             // they are collinear or degenerate
             // check if they are degenerate points
@@ -82,21 +82,21 @@ public extension LineSegmentType where Point.Scalar: FloatingPointType {
             let dv = dotProduct(v, v)
             if du == 0 && dv == 0 {            // both segments are points
                 if S1.first != S2.first {         // they are distinct  points
-                    return .Disjoint
+                    return .disjoint
                 }
-                return .Intersect(S1.first)
+                return .intersect(S1.first)
             }
             if du == 0 {                     // S1 is a single point
                 if S2.containsPoint(S1.first) == false { // but is not in S2
-                    return .Disjoint
+                    return .disjoint
                 }
-                return .Intersect(S1.first)
+                return .intersect(S1.first)
             }
             if dv == 0 {                     // S2 a single point
                 if S1.containsPoint(S2.first) == false { // but is not in S1
-                    return .Disjoint
+                    return .disjoint
                 }
-            return .Intersect(S2.first)
+            return .intersect(S2.first)
             }
             // they are collinear segments - get overlap (or not)
 
@@ -117,32 +117,32 @@ public extension LineSegmentType where Point.Scalar: FloatingPointType {
             }
             // NO overlap
             if t0 > 1 || t1 < 0 {
-                return .Disjoint
+                return .disjoint
             }
             t0 = t0 < 0 ? 0 : t0               // clip to min 0
             t1 = t1 > 1 ? 1 : t1               // clip to max 1
             if t0 == t1 {                  // intersect is a point
-                return .Intersect(S2.first + t0 * v)
+                return .intersect(S2.first + t0 * v)
             }
 
             // they overlap in a valid subsegment
-            return .Overlap(Self(first: S2.first + t0 * v, second: S2.first + t1 * v))
+            return .overlap(Self(first: S2.first + t0 * v, second: S2.first + t1 * v))
         }
 
         // the segments are skew and may intersect in a point
         // get the intersect parameter for S1
         let sI = perp(v, w) / D
         if sI < 0 || sI > 1 {               // no intersect with S1
-            return .Disjoint
+            return .disjoint
         }
 
         // get the intersect parameter for S2
         let tI = perp(u, w) / D
         if tI < 0 || tI > 1 {               // no intersect with S2
-            return .Disjoint
+            return .disjoint
         }
 
-        return .Intersect(S1.first + sI * u)
+        return .intersect(S1.first + sI * u)
     }
 
 }
